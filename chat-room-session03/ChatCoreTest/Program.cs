@@ -80,7 +80,7 @@ namespace ChatCoreTest
 
         public static void PackegeData()
         {
-            var pos = BitConverter.GetBytes(m_Pos + 4);
+            var pos = BitConverter.GetBytes(m_Pos);
             if (BitConverter.IsLittleEndian) Array.Reverse(pos);
             pos.CopyTo(myData, 0);
             m_PacketData.CopyTo(myData, sizeof(uint));
